@@ -12,8 +12,6 @@ export default function AlertBox({
       iconClass = "check-circle-fill"
       break
     case "danger":
-      iconClass = "exclamation-triangle-fill"
-      break
     case "warning":
       iconClass = "exclamation-triangle-fill"
       break
