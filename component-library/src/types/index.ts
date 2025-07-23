@@ -4,7 +4,7 @@ export interface AlertBoxProps {
   type: AlertType
   message: string
   onClose?: () => void
-  chldren?: React.ReactNode
+  children?: React.ReactNode
 }
 
 export interface User {
