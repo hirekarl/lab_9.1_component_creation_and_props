@@ -13,6 +13,7 @@ export default function AlertBoxTest() {
         <ol>
           <li>Think about what you've done.</li>
           <li>Think about it some more.</li>
+          <li>Do better next time.</li>
         </ol>
       </AlertBox>
       <AlertBox type="warning" message="Be careful!">

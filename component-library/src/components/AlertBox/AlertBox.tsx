@@ -6,9 +6,24 @@ export default function AlertBox({
   onClose,
   children,
 }: AlertBoxProps) {
+  let iconClass
+  switch (type) {
+    case "success":
+      iconClass = "check-circle-fill"
+      break
+    case "danger":
+      iconClass = "exclamation-triangle-fill"
+      break
+    case "warning":
+      iconClass = "exclamation-triangle-fill"
+      break
+    case "info":
+      iconClass = "info-circle-fill"
+      break
+  }
   return (
     <div className={"alert alert-dismissible alert-" + type} role="alert">
-      <h3 className="alert-heading fs-5">{message}</h3>
+      <h3 className="alert-heading fs-5"><i className={"bi bi-" + iconClass}></i> {message}</h3>
       <button
         type="button"
         className="btn-close"
