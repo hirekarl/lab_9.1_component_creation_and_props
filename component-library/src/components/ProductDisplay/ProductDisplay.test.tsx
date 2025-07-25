@@ -14,7 +14,7 @@ export default function ProductDisplayTest() {
   }
 
   function handleAddToCart(id: string) {
-    alert(`"Add to Cart" button clicked for product with ID ${id}.`)
+    alert(`You clicked the "Add to Cart" button for product with ID ${id}.`)
   }
 
   return (
