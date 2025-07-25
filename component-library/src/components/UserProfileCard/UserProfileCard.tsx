@@ -7,10 +7,8 @@ export default function UserProfileCard({
   onEdit,
   children,
 }: UserProfileCardProps) {
-  const profilePhotoAltText = `${user.name}'s profile photo.`
-  const emailMailtoUrl = `mailto:${user.email}`
   return (
-    <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+    <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12 mb-3">
       <div className="card">
         <div className="card-body">
           <div className="row mb-3">
@@ -19,7 +17,7 @@ export default function UserProfileCard({
                 <img
                   className="img-fluid rounded-circle"
                   src={user.avatarUrl}
-                  alt={profilePhotoAltText}
+                  alt={`${user.name}'s profile photo.`}
                 />
               )}
             </div>
@@ -29,7 +27,7 @@ export default function UserProfileCard({
                 <ul className="list-unstyled">
                   {showEmail && (
                     <li>
-                      <a href={emailMailtoUrl}>{user.email}</a>
+                      <a href={`mailto:${user.email}`}>{user.email}</a>
                     </li>
                   )}
                   {showRole && <li>{user.role}</li>}
