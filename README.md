@@ -17,7 +17,7 @@ cd component-library && npm i && npm run dev
 2. Navigate in the browser to [`localhost:5173`](http://localhost:5173).
 
 ### Submission Source
-Top-level application behavior can be found at [`./src/App.tsx`](./src/App.tsx).
+Top-level application behavior can be found at [`App.tsx`](./component-library/src/App.tsx).
 
 ### Component Usage Documentation
 #### `AlertBox`
