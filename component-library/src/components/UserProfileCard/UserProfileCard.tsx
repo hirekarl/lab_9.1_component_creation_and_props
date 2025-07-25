@@ -1,3 +1,4 @@
+import { type User } from "../../types"
 import { type UserProfileCardProps } from "../../types"
 
 export default function UserProfileCard({
@@ -7,14 +8,15 @@ export default function UserProfileCard({
   onEdit,
   children,
 }: UserProfileCardProps) {
-  const { id, name, email, role, avatarUrl } = user
+  const { id, name, email, role, avatarUrl }: User = user
+
   return (
     <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12 mb-3">
       <div className="card">
         <div className="card-body">
           <div className="row mb-3">
             <div className="col-4">
-              {user.avatarUrl && (
+              {avatarUrl && (
                 <img
                   className="img-fluid rounded-circle"
                   src={avatarUrl}

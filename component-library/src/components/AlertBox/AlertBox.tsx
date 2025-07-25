@@ -7,6 +7,7 @@ export default function AlertBox({
   children,
 }: AlertBoxProps) {
   let iconClass
+
   switch (type) {
     case "success":
       iconClass = "check-circle-fill"
@@ -19,6 +20,7 @@ export default function AlertBox({
       iconClass = "info-circle-fill"
       break
   }
+
   return (
     <div className={`alert alert-dismissible alert-${type}`} role="alert">
       <h3 className="alert-heading fs-5">

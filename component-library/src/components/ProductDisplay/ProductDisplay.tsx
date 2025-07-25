@@ -1,4 +1,6 @@
+import { type Product } from "../../types"
 import { type ProductDisplayProps } from "../../types"
+
 export default function ProductDisplay({
   product,
   showDescription,
@@ -6,7 +8,7 @@ export default function ProductDisplay({
   onAddToCart,
   children,
 }: ProductDisplayProps) {
-  const { id, name, price, description, inStock, imageUrl } = product
+  const { id, name, price, description, inStock, imageUrl }: Product = product
 
   let addToCartButton
   if (onAddToCart) {
