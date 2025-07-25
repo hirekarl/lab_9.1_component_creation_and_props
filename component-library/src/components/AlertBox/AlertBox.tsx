@@ -19,7 +19,7 @@
  * 
  * Usage:
  * - To render, invoke `AlertBox` with at least props
- *   `type` (of type ArrayType) and `message`.
+ *   `type` (of type AlertType) and `message`.
  * 
  * - `type` specifies "success" | "danger" | "warning" | "info",
  *    as specified and implemented by Bootstrap.
@@ -27,9 +27,9 @@
  * - `message` indicates the heading of the alert box.
  * 
  * - `onClose` runs code passed down from parent Component
- *   when the alert box is closed with the close button.
+ *   when the alert box is closed with the Close button.
  * 
- * - To pass content in the body of the `AlertBox`, pass that
+ * - To include content in the body of the alert box, pass that
  *   content as children of the parent Component.
  * 
  * - See ./AlertBox.test.tsx for demo implementation.

@@ -19,6 +19,159 @@ cd component-library && npm i && npm run dev
 ### Submission Source
 Top-level application behavior can be found at [`./src/App.tsx`](./src/App.tsx).
 
+### Component Usage Documentation
+#### `AlertBox`
+##### Props
+
+| prop | type | usage |
+|---|---|---|
+|`type`|`AlertType`|The Bootstrap styling to use when rendering the `AlertBox`. Also signals which [Bootstrap Icon](https://icons.getbootstrap.com/) to display. Options are `"success" \| "danger" \| "warning" \| "info"`.|
+|`message`|`string`|The message that is displayed at the top of the `AlertBox`, as a heading.|
+|`onClose?`|`() => void`|Code to run when the `AlertBox` is closed.|
+|`children?`|`React.ReactNode`|Any children passed from the parent Component.|
+
+##### Usage
+- To render, invoke `AlertBox` with at least props `type` (of type `AlertType`) and `message`.
+- `type` specifies `"success" | "danger" | "warning" | "info"`, as specified and implemented by Bootstrap.
+- `message` indicates the heading of the alert box.
+- `onClose` runs code passed down from parent Component when the alert box is closed with the Close button.
+- To include content in the body of the alert box, pass that content as children of the parent Component.
+- See [`AlertBox.test.tsx`](./component-library/src/components/AlertBox/AlertBox.test.tsx) for demo implementation.
+
+
+##### Example
+```tsx
+import AlertBox from "./src/components/AlertBox/AlertBox"
+
+export default function AlertBoxParent() {
+  function handleClose(): void {
+    alert("This will show when the alert box is closed.")
+  }
+
+  return (
+    <>
+      <AlertBox type="danger" message="Operation failed." onClose={handleClose}>
+        <p>Click the Close (&times;) button on this alert and see what happens.</p>
+      </AlertBox>
+    </>
+  )
+}
+```
+
+#### `UserProfileCard`
+##### Notes
+- `UserProfileCard`s are displayed in groups of four items per row on large screens.
+- Parent Component must wrap `UserProfileCard`s in `<div class="row">`.
+
+##### Props
+
+| prop | type | usage |
+|---|---|---|
+|`user`|`User`|The `User` whose `UserProfileCard` to render.|
+|`showEmail?`|`boolean`|Indicates whether to display `user`'s email address.|
+|`showRole?`|`boolean`|Indicates whether to display `user`'s role.|
+|`onEdit?`|`(userId: string) => void`|Code to run when "Edit" button is clicked.|
+|`children?`|`React.ReactNode`|Any children passed from the parent Component.|
+
+##### Usage
+- To render, invoke `UserProfileCard` with at least prop `user` (of type User).
+- `showEmail` indicates whether to display user's email address on the card.
+- `showRole` indicates whether to display user's role on the card.
+- Pass `children` from parent Component to add more detail.
+- Component must be rendered under a `<div class="row">` in the parent Component to display correctly.
+- See [`UserProfileCard.test.tsx`](.component-library/src/components/UserProfileCard/UserProfileCard.test.tsx) for demo implementation.
+
+##### Example
+```tsx
+import { type User } from "./src/types"
+import UserProfileCard from "./src/components/UserProfileCard/UserProfileCard"
+
+export default function UserProfileCardParent() {
+  const user: User = {
+    id: "1",
+    name: "John Smith",
+    email: "email@example.com",
+    role: "Manager",
+    avatarUrl: "https://www.example.com/johnsmith.png",
+  }
+
+  function handleEditButtonClicked(id: string) {
+    alert(`You clicked the "Edit" button for user with ID ${id}.`)
+  }
+
+  return (
+    <div className="row">
+      <UserProfileCard
+        user={user}
+        showEmail={true}
+        showRole={true}
+        onEdit={handleEditButtonClicked}>
+        <p className="text-success">
+          <small>{user} is a Pro user.</small>
+        </p>
+      </UserProfileCard>
+    </div>
+  )
+}
+```
+
+
+#### `ProductDisplay`
+##### Notes
+- `UserProfileCard`s are displayed in groups of three items per row on large screens.
+
+##### Props
+
+| prop | type | usage |
+|---|---|---|
+|`product`|`Product`|The `Product` to display.|
+|`showDescription?`|`boolean`|Indicates whether to show `product`'s description.|
+|`showStockStatus?`|`boolean`|Indicates whether to show `product`'s stock status.|
+|`onAddToCart?`|`(productId: string) => void`|Code to run when "Add to Cart" button clicked.|
+|`children?`|`React.ReactNode`|Any children passed from the parent Component.|
+
+##### Usage
+- To render, invoke `UserProfileCard` with at least prop `product` (of type Product).
+- `showDescription` indicates whether to display product's description.
+- `showStockStatus` indicates whether to display product's "in stock" or "out of stock" status.
+- `onAddToCart` runs code when the "Add to Cart" button is clicked.
+- Pass `children` from parent Component to add more detail.
+- Component must be rendered under a `<div class="row">` in the parent component to display correctly.
+- See [`UserProfileCard.test.tsx`](./component-library/src/components/ProductDisplay/ProductDisplay.test.tsx) for demo implementation.
+
+##### Example
+```tsx
+import { type Product } from "./src/types"
+import ProductDisplay from "./src/components/ProductDisplay/ProductDisplay"
+
+export default function ProductDisplayParent() {
+  const item: Product = {
+    id: "1",
+    name: "A Generic Product",
+    price: 0.99,
+    description: "A plain, regular product."
+    inStock: true,
+    imageUrl: "https://www.example.com/product.png",
+  }
+
+  function handleAddToCart(id: string): void {
+    alert(`You clicked the "Add to Cart" button for product with ID ${id}.`)
+  }
+
+  return (
+    <div className="row">
+      <ProductDisplay
+        product={item}
+        showDescription={true}
+        showStockStatus={true}
+        onAddToCart={handleAddToCart}>
+        <p>Any extra details would go here.</p>
+      </ProductDisplay>
+    </div>
+  )
+}
+```
+
 ### Reflection
 #### 1. How did you handle optional props in your components?
 >
@@ -58,7 +211,7 @@ This lab will help you practice building the foundational components that will b
 - [x] Show how to handle component nesting.
 
 #### 4. Documentation
-- [ ] Add comments to describe component props.
+- [x] Add comments to describe component props.
 - [ ] Create example usage documentation.
 - [ ] Document any special prop handling or requirements.
 
