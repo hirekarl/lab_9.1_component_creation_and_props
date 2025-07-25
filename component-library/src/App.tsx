@@ -6,7 +6,7 @@ import ProductDisplayTest from "./components/ProductDisplay/ProductDisplay.test"
 function App() {
   return (
     <>
-      <h1 className="my-4 text-center">Lab 9.1: Component Creation &amp; Props</h1>
+      <h1 className="my-5 text-center">Lab 9.1: Component Creation &amp; Props</h1>
       <hr />
       <Section title="Alert Box">
         <AlertBoxTest />
