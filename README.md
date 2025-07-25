@@ -34,7 +34,7 @@ Top-level application behavior can be found at [`App.tsx`](./component-library/s
 - To render, invoke `AlertBox` with at least props `type` (of type `AlertType`) and `message`.
 - `type` specifies `"success" | "danger" | "warning" | "info"`, as specified and implemented by [Bootstrap](https://getbootstrap.com/docs/5.3/customize/color/#colors).
 - `message` indicates the heading of the alert box.
-- `onClose` runs code passed down from parent Component when the alert box is closed with the Close button.
+- `onClose` runs code passed down from parent Component when the alert box is closed with the Close (×) button.
 - Pass `children` from parent Component to add more detail.
 - See [`AlertBox.test.tsx`](./component-library/src/components/AlertBox/AlertBox.test.tsx) for demo implementation.
 
