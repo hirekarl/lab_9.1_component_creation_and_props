@@ -20,16 +20,22 @@ export default function AlertBox({
       break
   }
   return (
-    <div className={"alert alert-dismissible alert-" + type} role="alert">
-      <h3 className="alert-heading fs-5"><i className={"bi bi-" + iconClass}></i> {message}</h3>
+    <div className={`alert alert-dismissible alert-${type}`} role="alert">
+      <h3 className="alert-heading fs-5">
+        <i className={`bi bi-${iconClass}`}></i> {message}
+      </h3>
       <button
         type="button"
         className="btn-close"
         data-bs-dismiss="alert"
         aria-label="Close"
         onClick={onClose}></button>
-      {children ? <hr /> : null}
-      {children ? children : null}
+      {children && (
+        <>
+          <hr />
+          {children}
+        </>
+      )}
     </div>
   )
 }
