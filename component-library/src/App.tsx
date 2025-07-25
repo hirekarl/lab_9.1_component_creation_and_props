@@ -5,7 +5,7 @@ import UserProfileCardTest from "./components/UserProfileCard/UserProfileCard.te
 function App() {
   return (
     <>
-      <h1 className="my-3">Lab 9.1: Component Creation and Props</h1>
+      <h1 className="my-4 text-center">Lab 9.1: Component Creation &amp; Props</h1>
       <hr />
       <Section title="Alert Box">
         <AlertBoxTest />
