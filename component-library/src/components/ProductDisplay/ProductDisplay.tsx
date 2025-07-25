@@ -10,7 +10,7 @@ export default function ProductDisplay({
 }: ProductDisplayProps) {
   const { id, name, price, description, inStock, imageUrl }: Product = product
 
-  let addToCartButton
+  let addToCartButton: React.ReactNode
   if (onAddToCart) {
     addToCartButton = (
       <button
