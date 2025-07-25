@@ -174,16 +174,16 @@ export default function ProductDisplayParent() {
 
 ### Reflection
 #### 1. How did you handle optional props in your components?
->
+> In `ProductDisplay`, I used an `if...else` clause to render a different JSX button depending on whether `onAddToCart` is provided or not. `UserProfileCard` only displays a button if an `onEdit` callback is sent as a prop. For the conditions specified by optional booleans, I used short-circuiting syntax to render associated JSX elements only when those booleans are truthy.
 
 #### 2. What considerations did you make when designing the component interfaces?
->
+> In the cases where children were accepted as props, I had to find an appropriate place in the Components to render the children. For both the `UserProfileCard` and `ProductDisplay`, I chose to display the additional content just above the button at the bottom of the card, if it exists.
 
 #### 3. How did you ensure type safety across your components?
->
+> I implemented the props interfaces when bringing props into functional React components, making sure the types of the props passed to those components conform to spec. I created an interface for `Section` and a custom `BootstrapIconClassOptions` for the Bootstrap Icons-related icons to ensure only valid icon classes are passed to the component.
 
 #### 4. What challenges did you face when implementing component composition?
->
+> No challenges, really. I figured out early on that I could use the `.test.tsx` files as an opportunity to demonstrate various use cases, and that I could compose the different sections together using a `Section` React functional component that accepts children.
 
 ## Assignment
 ### Lab Overview
