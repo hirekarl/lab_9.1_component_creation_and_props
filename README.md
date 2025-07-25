@@ -212,8 +212,8 @@ This lab will help you practice building the foundational components that will b
 
 #### 4. Documentation
 - [x] Add comments to describe component props.
-- [ ] Create example usage documentation.
-- [ ] Document any special prop handling or requirements.
+- [x] Create example usage documentation.
+- [x] Document any special prop handling or requirements.
 
 ## Attributions
 - Fidget Spinner image: By Árni Dagur - Own work, CC0, https://commons.wikimedia.org/w/index.php?curid=59361838
