@@ -4,7 +4,7 @@
 2025-RTT-30  
 <time datetime="2025-07-23">2025-07-23</time>  
 
-![Preview alt text goes here.](./preview.png)
+![Preview of Lab 9.1 output with four AlertBox use cases visible.](./preview.png)
 
 ## Overview
 ### Viewer Instructions
