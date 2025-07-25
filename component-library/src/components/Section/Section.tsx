@@ -1,3 +1,27 @@
+/**
+ * Component: Section
+ *
+ * Props (SectionProps):
+ * - title: string                The Bootstrap styling to use
+ *                                when rendering the AlertBox.
+ *                                Also signals which Bootstrap
+ *                                Icon to display.
+ *
+ * - children?: React.ReactNode   Any children passed from the
+ *                                parent component.
+ * 
+ * Usage:
+ * - To render, invoke `Section` with at least prop
+ *   `title` of type `string`.
+ * 
+ * - `title` indicates the heading of the `Section`.
+ * 
+ * - To pass content in the body of the `Section`, pass that
+ *   content as children of the parent Component.
+ * 
+ * - See ../../App.tsx for demo implementation.
+ */
+
 import React from "react"
 
 interface SectionProps {
