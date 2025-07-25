@@ -1,15 +1,17 @@
 import AlertBox from "./AlertBox"
 
 export default function AlertBoxTest() {
+  function handleClose(): void {
+    alert("Just letting you know: you're about to dismiss the alert.")
+  }
+
   return (
     <>
       <AlertBox type="success" message="This was a success!!" />
       <AlertBox
         type="danger"
         message="This failed."
-        onClose={() =>
-          alert("Just letting you know: you're about to dismiss the alert.")
-        }>
+        onClose={handleClose}>
         <ol>
           <li>Think about what you've done.</li>
           <li>Think about it some more.</li>
