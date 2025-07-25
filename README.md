@@ -54,7 +54,7 @@ This lab will help you practice building the foundational components that will b
 
 #### 3. Component Composition
 - [x] Create example usage of components working together.
-- [ ] Demonstrate prop passing between components.
+- [x] Demonstrate prop passing between components.
 - [x] Show how to handle component nesting.
 
 #### 4. Documentation

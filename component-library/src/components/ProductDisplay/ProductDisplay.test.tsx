@@ -18,15 +18,35 @@ export default function ProductDisplayTest() {
   }
 
   return (
-    <ProductDisplay
-      product={fidgetSpinner}
-      showDescription={true}
-      showStockStatus={true}
-      onAddToCart={handleAddToCart}>
-      <p className="text-warning">
-        <i className="bi bi-exclamation-triangle-fill"></i> Hurry! These are
-        going fast!
-      </p>
-    </ProductDisplay>
+    <div className="row">
+      <ProductDisplay
+        product={fidgetSpinner}
+        showDescription={true}
+        showStockStatus={true}
+        onAddToCart={handleAddToCart}>
+        <p className="text-warning">
+          <i className="bi bi-exclamation-triangle-fill"></i> Hurry! These are
+          going fast!
+        </p>
+      </ProductDisplay>
+      <ProductDisplay
+        product={fidgetSpinner}
+        showDescription={true}
+        showStockStatus={false}
+        onAddToCart={handleAddToCart}>
+        <p className="text-muted">
+          A Product Display without showing stock status.
+        </p>
+      </ProductDisplay>
+      <ProductDisplay
+        product={fidgetSpinner}
+        showDescription={false}
+        showStockStatus={true}
+        onAddToCart={handleAddToCart}>
+        <p className="text-muted">
+          A Product Display without showing description.
+        </p>
+      </ProductDisplay>
+    </div>
   )
 }
