@@ -11,7 +11,7 @@ export default function UserProfileCardTest() {
   }
 
   function handleEditButtonClicked(id: string) {
-    alert(`You clicked the "Edit" button for user with id ${id}.`)
+    alert(`You clicked the "Edit" button for user with ID ${id}.`)
   }
 
   return (
