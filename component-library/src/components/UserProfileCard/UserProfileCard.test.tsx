@@ -12,8 +12,8 @@ export default function UserProfileCardTest(): ReactNode {
     avatarUrl: "https://i.ibb.co/4g1jzTrm/karl-johnson-webfriendly.jpgx",
   }
 
-  function handleEditButtonClicked(id: string): void {
-    alert(`You clicked the "Edit" button for user with ID ${id}.`)
+  function handleEditButtonClicked(userId: string): void {
+    alert(`You clicked the "Edit" button for user with ID ${userId}.`)
   }
 
   return (

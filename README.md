@@ -25,17 +25,17 @@ Top-level application behavior can be found at [`App.tsx`](./component-library/s
 
 | prop | type | usage |
 |---|---|---|
-|`type`|`AlertType`|The Bootstrap styling to use when rendering the `AlertBox`. Also signals which [Bootstrap Icon](https://icons.getbootstrap.com/) to display. Options are `"success" \| "danger" \| "warning" \| "info"`.|
+|`type`|`AlertType`|The [Bootstrap](https://getbootstrap.com/) styling to use when rendering the `AlertBox`. Also signals which [Bootstrap Icon](https://icons.getbootstrap.com/) to display. Options are `"success" \| "danger" \| "warning" \| "info"`.|
 |`message`|`string`|The message that is displayed at the top of the `AlertBox`, as a heading.|
 |`onClose?`|`() => void`|Code to run when the `AlertBox` is closed.|
 |`children?`|`React.ReactNode`|Any children passed from the parent Component.|
 
 ##### Usage
 - To render, invoke `AlertBox` with at least props `type` (of type `AlertType`) and `message`.
-- `type` specifies `"success" | "danger" | "warning" | "info"`, as specified and implemented by Bootstrap.
+- `type` specifies `"success" | "danger" | "warning" | "info"`, as specified and implemented by [Bootstrap](https://getbootstrap.com/docs/5.3/customize/color/#colors).
 - `message` indicates the heading of the alert box.
 - `onClose` runs code passed down from parent Component when the alert box is closed with the Close button.
-- To include content in the body of the alert box, pass that content as children of the parent Component.
+- Pass `children` from parent Component to add more detail.
 - See [`AlertBox.test.tsx`](./component-library/src/components/AlertBox/AlertBox.test.tsx) for demo implementation.
 
 
@@ -76,9 +76,9 @@ export default function AlertBoxParent(): ReactNode {
 |`children?`|`React.ReactNode`|Any children passed from the parent Component.|
 
 ##### Usage
-- To render, invoke `UserProfileCard` with at least prop `user` (of type User).
-- `showEmail` indicates whether to display user's email address on the card.
-- `showRole` indicates whether to display user's role on the card.
+- To render, invoke `UserProfileCard` with at least prop `user` (of type `User`).
+- `showEmail` indicates whether to display `user`'s email address on the card.
+- `showRole` indicates whether to display `user`'s role on the card.
 - Pass `children` from parent Component to add more detail.
 - Component must be rendered under a `<div class="row">` in the parent Component to display correctly.
 - See [`UserProfileCard.test.tsx`](./component-library/src/components/UserProfileCard/UserProfileCard.test.tsx) for demo implementation.
@@ -135,9 +135,9 @@ export default function UserProfileCardParent(): ReactNode {
 |`children?`|`React.ReactNode`|Any children passed from the parent Component.|
 
 ##### Usage
-- To render, invoke `ProductDisplay` with at least prop `product` (of type Product).
-- `showDescription` indicates whether to display product's description.
-- `showStockStatus` indicates whether to display product's "in stock" or "out of stock" status.
+- To render, invoke `ProductDisplay` with at least prop `product` (of type `Product`).
+- `showDescription` indicates whether to display `product`'s description.
+- `showStockStatus` indicates whether to display `product`'s "in stock" or "out of stock" status.
 - `onAddToCart` runs code when the "Add to Cart" button is clicked.
 - Pass `children` from parent Component to add more detail.
 - Component must be rendered under a `<div class="row">` in the parent component to display correctly.

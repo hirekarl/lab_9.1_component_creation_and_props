@@ -15,8 +15,8 @@ export default function ProductDisplayTest(): ReactNode {
       "https://upload.wikimedia.org/wikipedia/commons/f/f3/Fidget_spinner_red%2C_cropped.jpg",
   }
 
-  function handleAddToCart(id: string): void {
-    alert(`You clicked the "Add to Cart" button for product with ID ${id}.`)
+  function handleAddToCart(productId: string): void {
+    alert(`You clicked the "Add to Cart" button for product with ID ${productId}.`)
   }
 
   return (
