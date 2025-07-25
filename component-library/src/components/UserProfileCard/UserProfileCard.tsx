@@ -26,12 +26,12 @@ export default function UserProfileCard({
               <h3 className="card-title fs-5">{name}</h3>
               <div className="card-text">
                 <ul className="list-unstyled">
+                  {showRole && <li>{role}</li>}
                   {showEmail && (
                     <li>
                       <a href={`mailto:${email}`}>{email}</a>
                     </li>
                   )}
-                  {showRole && <li>{role}</li>}
                 </ul>
               </div>
             </div>
