@@ -8,10 +8,16 @@
 
 ## Overview
 ### Viewer Instructions
-View deployed app at [`TODO`]().
+1. Run the following in the terminal:
+
+```bash
+cd component-library && npm i && npm run dev
+```
+
+2. Navigate in the browser to [`localhost:5173`](http://localhost:5173).
 
 ### Submission Source
-Top-level application behavior can be found at [`TODO`]().
+Top-level application behavior can be found at [`./src/App.tsx`](./src/App.tsx).
 
 ### Reflection
 #### 1. How did you handle optional props in your components?
@@ -37,19 +43,19 @@ This lab will help you practice building the foundational components that will b
 
 ### Activity Tasks
 #### 1. Component Implementation
-- [ ] Implement each component according to its interface requirements.
-- [ ] Use proper TypeScript types and interfaces.
-- [ ] Implement prop validation where appropriate.
-- [ ] Handle optional props and children correctly.
+- [x] Implement each component according to its interface requirements.
+- [x] Use proper TypeScript types and interfaces.
+- [x] Implement prop validation where appropriate.
+- [x] Handle optional props and children correctly.
 
 #### 2. Component Testing
-- [ ] Test different prop combinations.
-- [ ] Verify that components render correctly with various props.
+- [x] Test different prop combinations.
+- [x] Verify that components render correctly with various props.
 
 #### 3. Component Composition
-- [ ] Create example usage of components working together.
+- [x] Create example usage of components working together.
 - [ ] Demonstrate prop passing between components.
-- [ ] Show how to handle component nesting.
+- [x] Show how to handle component nesting.
 
 #### 4. Documentation
 - [ ] Add comments to describe component props.
