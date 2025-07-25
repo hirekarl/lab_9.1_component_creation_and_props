@@ -3,10 +3,29 @@ export default function ProductDisplay({
   product,
   showDescription,
   showStockStatus,
-  // onAddToCart,
+  onAddToCart,
   children,
 }: ProductDisplayProps) {
   const { id, name, price, description, inStock, imageUrl } = product
+
+  let addToCartButton
+  if (onAddToCart) {
+    addToCartButton = (
+      <button
+        data-id={id}
+        type="button"
+        className="btn btn-primary w-100"
+        onClick={() => onAddToCart(id)}>
+        Add to Cart
+      </button>
+    )
+  } else {
+    addToCartButton = (
+      <button data-id={id} type="button" className="btn btn-primary w-100">
+        Add to Cart
+      </button>
+    )
+  }
 
   return (
     <div className="row">
@@ -32,10 +51,8 @@ export default function ProductDisplay({
               ) : (
                 <p className="text-danger">Out of Stock</p>
               ))}
-              {children}
-            <button data-id={id} type="button" className="btn btn-primary w-100">
-              Add to Cart
-            </button>
+            {children}
+            {addToCartButton}
           </div>
         </div>
       </div>
