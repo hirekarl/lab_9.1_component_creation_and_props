@@ -137,7 +137,7 @@ export default function UserProfileCardParent() {
 - `onAddToCart` runs code when the "Add to Cart" button is clicked.
 - Pass `children` from parent Component to add more detail.
 - Component must be rendered under a `<div class="row">` in the parent component to display correctly.
-- See [`UserProfileCard.test.tsx`](./component-library/src/components/ProductDisplay/ProductDisplay.test.tsx) for demo implementation.
+- See [`ProductDisplay.test.tsx`](./component-library/src/components/ProductDisplay/ProductDisplay.test.tsx) for demo implementation.
 
 ##### Example
 ```tsx
