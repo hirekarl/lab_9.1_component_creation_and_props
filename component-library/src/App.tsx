@@ -1,6 +1,7 @@
 import Section from "./components/Section/Section"
 import AlertBoxTest from "./components/AlertBox/AlertBox.test"
 import UserProfileCardTest from "./components/UserProfileCard/UserProfileCard.test"
+import ProductDisplayTest from "./components/ProductDisplay/ProductDisplay.test"
 
 function App() {
   return (
@@ -13,6 +14,10 @@ function App() {
       <hr />
       <Section title="User Profile Card">
         <UserProfileCardTest />
+      </Section>
+      <hr />
+      <Section title="Product Display">
+        <ProductDisplayTest />
       </Section>
     </>
   )
