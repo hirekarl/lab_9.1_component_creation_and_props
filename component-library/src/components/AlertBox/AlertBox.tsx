@@ -6,7 +6,7 @@ export default function AlertBox({
   onClose,
   children,
 }: AlertBoxProps) {
-  let bootstrapIconClass
+  let bootstrapIconClass: "check-circle-fill" | "exclamation-triangle-fill" | "info-circle-fill"
 
   switch (type) {
     case "success":
