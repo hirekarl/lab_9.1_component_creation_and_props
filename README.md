@@ -79,7 +79,7 @@ export default function AlertBoxParent() {
 - `showRole` indicates whether to display user's role on the card.
 - Pass `children` from parent Component to add more detail.
 - Component must be rendered under a `<div class="row">` in the parent Component to display correctly.
-- See [`UserProfileCard.test.tsx`](.component-library/src/components/UserProfileCard/UserProfileCard.test.tsx) for demo implementation.
+- See [`UserProfileCard.test.tsx`](./component-library/src/components/UserProfileCard/UserProfileCard.test.tsx) for demo implementation.
 
 ##### Example
 ```tsx
