@@ -24,7 +24,7 @@ export default function UserProfileCard({
               )}
             </div>
             <div className="col-8">
-              <h2 className="card-title fs-5">{user.name}</h2>
+              <h3 className="card-title fs-5">{user.name}</h3>
               <div className="card-text">
                 <ul className="list-unstyled">
                   {showEmail && (
