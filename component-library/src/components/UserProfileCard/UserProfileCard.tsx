@@ -7,6 +7,7 @@ export default function UserProfileCard({
   onEdit,
   children,
 }: UserProfileCardProps) {
+  const { id, name, email, role, avatarUrl } = user
   return (
     <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12 mb-3">
       <div className="card">
@@ -16,21 +17,21 @@ export default function UserProfileCard({
               {user.avatarUrl && (
                 <img
                   className="img-fluid rounded-circle"
-                  src={user.avatarUrl}
-                  alt={`${user.name}'s profile photo.`}
+                  src={avatarUrl}
+                  alt={`${name}'s profile photo.`}
                 />
               )}
             </div>
             <div className="col-8">
-              <h3 className="card-title fs-5">{user.name}</h3>
+              <h3 className="card-title fs-5">{name}</h3>
               <div className="card-text">
                 <ul className="list-unstyled">
                   {showEmail && (
                     <li>
-                      <a href={`mailto:${user.email}`}>{user.email}</a>
+                      <a href={`mailto:${email}`}>{email}</a>
                     </li>
                   )}
-                  {showRole && <li>{user.role}</li>}
+                  {showRole && <li>{role}</li>}
                 </ul>
               </div>
             </div>
@@ -46,8 +47,9 @@ export default function UserProfileCard({
                 <button
                   type="button"
                   className="btn btn-primary w-100"
+                  data-id={id}
                   onClick={() => {
-                    onEdit(user.id)
+                    onEdit(id)
                   }}>
                   Edit
                 </button>

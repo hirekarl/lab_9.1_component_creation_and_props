@@ -10,8 +10,8 @@ export default function UserProfileCardTest() {
     avatarUrl: "https://i.ibb.co/4g1jzTrm/karl-johnson-webfriendly.jpgx",
   }
 
-  function handleEditButtonClicked() {
-    alert(`You clicked the "Edit" button.`)
+  function handleEditButtonClicked(id: string) {
+    alert(`You clicked the "Edit" button for user with id ${id}.`)
   }
 
   return (
