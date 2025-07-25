@@ -118,7 +118,7 @@ export default function UserProfileCardParent() {
 
 #### `ProductDisplay`
 ##### Notes
-- `UserProfileCard`s are displayed in groups of three items per row on large screens.
+- `ProductDisplay`s are displayed in groups of three items per row on large screens.
 
 ##### Props
 
@@ -131,7 +131,7 @@ export default function UserProfileCardParent() {
 |`children?`|`React.ReactNode`|Any children passed from the parent Component.|
 
 ##### Usage
-- To render, invoke `UserProfileCard` with at least prop `product` (of type Product).
+- To render, invoke `ProductDisplay` with at least prop `product` (of type Product).
 - `showDescription` indicates whether to display product's description.
 - `showStockStatus` indicates whether to display product's "in stock" or "out of stock" status.
 - `onAddToCart` runs code when the "Add to Cart" button is clicked.
