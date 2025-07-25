@@ -39,3 +39,8 @@ export interface ProductDisplayProps {
   onAddToCart?: (productId: string) => void
   children?: React.ReactNode
 }
+
+export type BootstrapIconClassOptions =
+  | "check-circle-fill"
+  | "exclamation-triangle-fill"
+  | "info-circle-fill"

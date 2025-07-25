@@ -1,4 +1,5 @@
 import { type AlertBoxProps } from "../../types"
+import { type BootstrapIconClassOptions } from "../../types"
 
 export default function AlertBox({
   type,
@@ -6,7 +7,7 @@ export default function AlertBox({
   onClose,
   children,
 }: AlertBoxProps) {
-  let bootstrapIconClass: "check-circle-fill" | "exclamation-triangle-fill" | "info-circle-fill"
+  let bootstrapIconClass: BootstrapIconClassOptions
 
   switch (type) {
     case "success":
