@@ -1,10 +1,12 @@
+import { type ReactNode } from "react"
+
 export type AlertType = "success" | "danger" | "warning" | "info"
 
 export interface AlertBoxProps {
   type: AlertType
   message: string
   onClose?: () => void
-  children?: React.ReactNode
+  children?: ReactNode
 }
 
 export interface User {
@@ -20,7 +22,7 @@ export interface UserProfileCardProps {
   showEmail?: boolean
   showRole?: boolean
   onEdit?: (userId: string) => void
-  children?: React.ReactNode
+  children?: ReactNode
 }
 
 export interface Product {
@@ -37,10 +39,15 @@ export interface ProductDisplayProps {
   showDescription?: boolean
   showStockStatus?: boolean
   onAddToCart?: (productId: string) => void
-  children?: React.ReactNode
+  children?: ReactNode
 }
 
 export type BootstrapIconClassOptions =
   | "check-circle-fill"
   | "exclamation-triangle-fill"
   | "info-circle-fill"
+
+export interface SectionProps {
+  title: string
+  children: ReactNode
+}

@@ -1,9 +1,11 @@
+import { type ReactNode } from "react"
+
 import Section from "./components/Section/Section"
 import AlertBoxTest from "./components/AlertBox/AlertBox.test"
 import UserProfileCardTest from "./components/UserProfileCard/UserProfileCard.test"
 import ProductDisplayTest from "./components/ProductDisplay/ProductDisplay.test"
 
-function App() {
+export default function App(): ReactNode {
   return (
     <>
       <h1 className="my-5 text-center">Lab 9.1: Component Creation &amp; Props</h1>
@@ -22,5 +24,3 @@ function App() {
     </>
   )
 }
-
-export default App

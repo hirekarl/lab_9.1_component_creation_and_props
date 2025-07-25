@@ -35,6 +35,8 @@
  * - See ./AlertBox.test.tsx for demo implementation.
  */
 
+import { type ReactNode } from "react"
+
 import { type AlertBoxProps } from "../../types"
 import { type BootstrapIconClassOptions } from "../../types"
 
@@ -43,7 +45,7 @@ export default function AlertBox({
   message,
   onClose,
   children,
-}: AlertBoxProps) {
+}: AlertBoxProps): ReactNode {
   let bootstrapIconClass: BootstrapIconClassOptions
 
   switch (type) {

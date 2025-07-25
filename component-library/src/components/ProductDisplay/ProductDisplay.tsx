@@ -42,6 +42,8 @@
  * - See ./UserProfileCard.test.tsx for demo implementation.
  */
 
+import { type ReactNode } from "react"
+
 import { type Product } from "../../types"
 import { type ProductDisplayProps } from "../../types"
 
@@ -51,10 +53,10 @@ export default function ProductDisplay({
   showStockStatus,
   onAddToCart,
   children,
-}: ProductDisplayProps) {
+}: ProductDisplayProps): ReactNode {
   const { id, name, price, description, inStock, imageUrl }: Product = product
 
-  let addToCartButton: React.ReactNode
+  let addToCartButton: ReactNode
   if (onAddToCart) {
     addToCartButton = (
       <button

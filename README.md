@@ -41,9 +41,11 @@ Top-level application behavior can be found at [`App.tsx`](./component-library/s
 
 ##### Example
 ```tsx
+import { ReactNode } from "react"
+
 import AlertBox from "./src/components/AlertBox/AlertBox"
 
-export default function AlertBoxParent() {
+export default function AlertBoxParent(): ReactNode {
   function handleClose(): void {
     alert("This will show when the alert box is closed.")
   }
@@ -83,10 +85,12 @@ export default function AlertBoxParent() {
 
 ##### Example
 ```tsx
+import { ReactNode } from "react"
+
 import { type User } from "./src/types"
 import UserProfileCard from "./src/components/UserProfileCard/UserProfileCard"
 
-export default function UserProfileCardParent() {
+export default function UserProfileCardParent(): ReactNode {
   const user: User = {
     id: "1",
     name: "John Smith",
@@ -95,8 +99,8 @@ export default function UserProfileCardParent() {
     avatarUrl: "https://www.example.com/johnsmith.png",
   }
 
-  function handleEditButtonClicked(id: string) {
-    alert(`You clicked the "Edit" button for user with ID ${id}.`)
+  function handleEditButtonClicked(userId: string): void {
+    alert(`You clicked the "Edit" button for user with ID ${userId}.`)
   }
 
   return (
@@ -141,10 +145,12 @@ export default function UserProfileCardParent() {
 
 ##### Example
 ```tsx
+import { ReactNode } from "react"
+
 import { type Product } from "./src/types"
 import ProductDisplay from "./src/components/ProductDisplay/ProductDisplay"
 
-export default function ProductDisplayParent() {
+export default function ProductDisplayParent(): ReactNode {
   const item: Product = {
     id: "1",
     name: "A Generic Product",
@@ -154,8 +160,8 @@ export default function ProductDisplayParent() {
     imageUrl: "https://www.example.com/product.png",
   }
 
-  function handleAddToCart(id: string): void {
-    alert(`You clicked the "Add to Cart" button for product with ID ${id}.`)
+  function handleAddToCart(productId: string): void {
+    alert(`You clicked the "Add to Cart" button for product with ID ${productId}.`)
   }
 
   return (

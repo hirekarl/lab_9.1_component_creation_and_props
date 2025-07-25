@@ -22,14 +22,11 @@
  * - See ../../App.tsx for demo implementation.
  */
 
-import React from "react"
+import { type ReactNode } from "react"
 
-interface SectionProps {
-  title: string
-  children?: React.ReactNode
-}
+import { type SectionProps } from "../../types"
 
-export default function Section({ title, children }: SectionProps) {
+export default function Section({ title, children }: SectionProps): ReactNode {
   return (
     <section className="mb-5">
       <h2 className="my-4 text-center">{title}</h2>

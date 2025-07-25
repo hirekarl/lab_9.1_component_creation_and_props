@@ -1,7 +1,9 @@
+import { type ReactNode } from "react"
+
 import { type User } from "../../types"
 import UserProfileCard from "./UserProfileCard"
 
-export default function UserProfileCardTest() {
+export default function UserProfileCardTest(): ReactNode {
   const user: User = {
     id: "9a54d337-8b45-4bb2-a840-a79cc553c186",
     name: "Karl Johnson",
@@ -10,7 +12,7 @@ export default function UserProfileCardTest() {
     avatarUrl: "https://i.ibb.co/4g1jzTrm/karl-johnson-webfriendly.jpgx",
   }
 
-  function handleEditButtonClicked(id: string) {
+  function handleEditButtonClicked(id: string): void {
     alert(`You clicked the "Edit" button for user with ID ${id}.`)
   }
 

@@ -1,6 +1,8 @@
+import { type ReactNode } from "react"
+
 import AlertBox from "./AlertBox"
 
-export default function AlertBoxTest() {
+export default function AlertBoxTest(): ReactNode {
   function handleClose(): void {
     alert("Just letting you know: you're about to dismiss an alert.")
   }

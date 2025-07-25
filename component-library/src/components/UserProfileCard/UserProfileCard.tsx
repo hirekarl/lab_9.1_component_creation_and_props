@@ -16,31 +16,32 @@
  * - onEdit?: (userId: string) => void    Code to run when
  *                                        "Edit" button is
  *                                        clicked.
- * 
+ *
  * - children?: React.ReactNode           Any children passed
  *                                        from the parent Com-
  *                                        ponent.
- * 
+ *
  * Usage:
  * - To render, invoke `UserProfileCard` with at least prop
  *   `user` (of type User).
- * 
+ *
  * - `showEmail` indicates whether to display user's email
  *   address on the card.
- * 
+ *
  * - `showRole` indicates whether to display user's role
  *   on the card.
- * 
+ *
  * - Pass `children` from parent Component to add more detail.
- * 
+ *
  * - Component must be rendered under a <div class="row"> in
  *   the parent component to display correctly.
- * 
+ *
  * - See ./UserProfileCard.test.tsx for demo implementation.
  */
 
-import { type User } from "../../types"
-import { type UserProfileCardProps } from "../../types"
+import { type ReactNode } from "react"
+
+import { type User, type UserProfileCardProps } from "../../types"
 
 export default function UserProfileCard({
   user,
@@ -48,7 +49,7 @@ export default function UserProfileCard({
   showRole,
   onEdit,
   children,
-}: UserProfileCardProps) {
+}: UserProfileCardProps): ReactNode {
   const { id, name, email, role, avatarUrl }: User = user
 
   return (

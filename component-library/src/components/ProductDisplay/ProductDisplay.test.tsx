@@ -1,7 +1,9 @@
+import { type ReactNode } from "react"
+
 import { type Product } from "../../types"
 import ProductDisplay from "./ProductDisplay"
 
-export default function ProductDisplayTest() {
+export default function ProductDisplayTest(): ReactNode {
   const fidgetSpinner: Product = {
     id: "27d1661f-65cb-453a-ae9a-88cb93df151f",
     name: "Fidget Spinner",
