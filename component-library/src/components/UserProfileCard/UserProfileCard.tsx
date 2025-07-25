@@ -1,3 +1,44 @@
+/**
+ * Component: UserProfileCard
+ *
+ * Props (UserProfileCardProps):
+ * - user: User                           The User whose
+ *                                        UserProfileCard to
+ *                                        render.
+ *
+ * - showEmail?: boolean                  Indicates whether to
+ *                                        display user's email
+ *                                        address.
+ *
+ * - showRole?: boolean                   Indicates whether to
+ *                                        display user's role.
+ *
+ * - onEdit?: (userId: string) => void    Code to run when
+ *                                        "Edit" button is
+ *                                        clicked.
+ * 
+ * - children?: React.ReactNode           Any children passed
+ *                                        from the parent Com-
+ *                                        ponent.
+ * 
+ * Usage:
+ * - To render, invoke `UserProfileCard` with at least prop
+ *   `user` (of type User).
+ * 
+ * - `showEmail` indicates whether to display user's email
+ *   address on the card.
+ * 
+ * - `showRole` indicates whether to display user's role
+ *   on the card.
+ * 
+ * - Pass `children` from parent Component to add more detail.
+ * 
+ * - Component must be rendered under a <div class="row"> in
+ *   the parent component to display correctly.
+ * 
+ * - See ./UserProfileCard.test.tsx for demo implementation.
+ */
+
 import { type User } from "../../types"
 import { type UserProfileCardProps } from "../../types"
 

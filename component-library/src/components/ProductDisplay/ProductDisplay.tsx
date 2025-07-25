@@ -1,3 +1,47 @@
+/**
+ * Component: ProductDisplay
+ *
+ * Props (ProductDisplayProps):
+ * - product: Product                       The Product to
+ *                                          display.
+ *
+ * - showDescription?: boolean              Indicates wheth-
+ *                                          er to show pro-
+ *                                          duct description.
+ *
+ * - showStockStatus?: boolean              Indicates wheth-
+ *                                          er to show pro-
+ *                                          duct stock status.
+ * 
+ * - onAddToCart?: (productId: string) =>   Code to run when
+ *     void                                 "Add to Cart" but-
+ *                                          ton clicked.
+ *
+ * - children? React.ReactNode              Any children passed
+ *                                          from the parent
+ *                                          Component.
+ * 
+ * Usage:
+ * - To render, invoke `UserProfileCard` with at least prop
+ *   `product` (of type Product).
+ * 
+ * - `showDescription` indicates whether to display product's
+ *   description.
+ * 
+ * - `showStockStatus` indicates whether to display product's
+ *   "in stock" or "out of stock" status.
+ * 
+ * - `onAddToCart` runs code when the "Add to Cart" button
+ *   is clicked.
+ * 
+ * - Pass `children` from parent Component to add more detail.
+ * 
+ * - Component must be rendered under a <div class="row"> in
+ *   the parent component to display correctly.
+ * 
+ * - See ./UserProfileCard.test.tsx for demo implementation.
+ */
+
 import { type Product } from "../../types"
 import { type ProductDisplayProps } from "../../types"
 
