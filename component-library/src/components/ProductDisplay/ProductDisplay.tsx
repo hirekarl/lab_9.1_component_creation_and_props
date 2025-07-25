@@ -3,7 +3,7 @@ export default function ProductDisplay({
   product,
   showDescription,
   showStockStatus,
-  onAddToCart,
+  // onAddToCart,
   children,
 }: ProductDisplayProps) {
   const { id, name, price, description, inStock, imageUrl } = product
@@ -33,7 +33,7 @@ export default function ProductDisplay({
                 <p className="text-danger">Out of Stock</p>
               ))}
               {children}
-            <button type="button" className="btn btn-primary w-100">
+            <button data-id={id} type="button" className="btn btn-primary w-100">
               Add to Cart
             </button>
           </div>
